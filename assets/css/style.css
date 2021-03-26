@@ -47,7 +47,10 @@ h3 {
   color: white;
 }
 
-p {
+p,
+input[type="text"],
+input[type="submit"],
+textarea {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -66,7 +69,7 @@ a {
 
 .container {
   width: 100%;
-  padding: 60px 100px;
+  padding: 80px 100px;
 }
 
 /* --> Header <-- */
@@ -148,6 +151,10 @@ header nav ul li:last-child {
   flex-wrap: wrap;
 }
 
+#body1 p {
+  text-align: left;
+}
+
 #body1 .box {
   display: flex;
   flex-direction: column;
@@ -185,8 +192,8 @@ header nav ul li:last-child {
 
 /* --> Body 2 <-- */
 
-#body2 h2,
-#body2 p {
+.container h2,
+.container p {
   text-align: center;
 }
 /* Master Box */
@@ -197,7 +204,7 @@ header nav ul li:last-child {
   justify-content: center;
 }
 
-.master-box .box {
+#body2 .master-box .box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,4 +273,104 @@ header nav ul li:last-child {
     url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
   background-blend-mode: color, normal;
   background-size: cover;
+}
+
+/* --> Body 3 <-- */
+#body3 {
+  background: var(--red);
+}
+
+#body3 .master-box {
+  justify-content: space-between;
+}
+
+#body3 .master-box .box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 27%;
+}
+
+#body3 .box img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+#body3 .bg {
+  background: url(../images/tianshu-liu-khQY5Eu-aa0-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* -->Contact <-- */
+#contact {
+  background: var(--darkblue);
+}
+
+#contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contact .box {
+  width: 45%;
+}
+
+#contact .box h2,
+#contact .box p {
+  text-align: left;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input[type="text"],
+.form textarea {
+  margin-bottom: 15px;
+  border-radius: 1.5rem;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: #fff;
+  color: var(--black);
+  border: none;
+}
+
+.form textarea {
+  resize: vertical;
+  width: 100%;
+  height: 100px;
+}
+
+.form input[type="submit"] {
+  width: 150px;
+  align-self: flex-end;
+  border-radius: 1.5rem;
+  padding: 10px 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: var(--black);
+  color: #fff;
+  border: none;
+  transition: 0.5s;
+}
+
+.form input[type="submit"]:hover {
+  background: var(--red);
+}
+
+/* --> Footer <--*/
+footer {
+  background: var(--black);
+  padding: 5px 100px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
 }
