@@ -1,0 +1,269 @@
+/* --> Imports <-- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Roboto:wght@300&display=swap");
+
+/* --> Variables <-- */
+:root {
+  /* Primary Palette */
+  --red: #e63946;
+  --skyblue: #8da8bd;
+  --darkblue: #1d3557;
+  /* Secondary Palette */
+  --blue: #457b9d;
+  --grey: #404e5c;
+  --black: #161d23;
+}
+
+/* --> Defaults <-- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --> Setup <-- */
+body {
+  background: var(--black);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  color: white;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: white;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 23px;
+  color: white;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  padding: 60px 100px;
+}
+
+/* --> Header <-- */
+header {
+  background: var(--black);
+  width: 100%;
+  padding: 8px 50px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.logo h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+/* Nav */
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 25px;
+  list-style-type: none;
+}
+
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* --> Banner <-- */
+#banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, #ff3645, #ff3645),
+    url(../images/background.jpg);
+  background-blend-mode: overlay, normal;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Title */
+.title {
+  position: relative;
+  text-align: center;
+  padding: 20px 60px;
+  border-radius: 2rem;
+  filter: drop-shadow(4px 4px 4px var(--black));
+  background: rgba(0, 0, 0, 0.01);
+  backdrop-filter: blur(5px);
+  cursor: default;
+  transition: 0.5s;
+}
+
+.title:hover {
+  transform: scale(1.1);
+}
+
+/* --> Body 1 <-- */
+#body1 .container {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#body1 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 70vh;
+  padding: 0 100px;
+}
+
+#body1 .box:first-child {
+  background: var(--darkblue);
+}
+
+#body1 .box:nth-child(2) {
+  background: url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-size: cover;
+}
+
+#body1 .box:nth-child(3) {
+  background: url(../images/andre-benz-MsMISAIe8Qw-unsplash.jpg);
+  background-size: cover;
+}
+
+#body1 .box:last-child {
+  background: var(--red);
+}
+/* Background */
+.bg {
+  width: 100%;
+  height: 400px;
+  background: url(../images/arc.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* --> Body 2 <-- */
+
+#body2 h2,
+#body2 p {
+  text-align: center;
+}
+/* Master Box */
+.master-box {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.master-box .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.master-box .box .middle {
+  position: relative;
+  width: 100%;
+  bottom: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  background: var(--red);
+}
+
+.master-box .box:hover .middle {
+  height: 100%;
+  bottom: 0%;
+}
+
+.master-box .box .middle img {
+  width: 70px;
+  height: 70px;
+}
+/* Master Box - Background */
+#box1 {
+  background: linear-gradient(0deg, #404e5c, #404e5c),
+    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-blend-mode: color, normal;
+  background-size: cover;
+}
+#box2 {
+  background: linear-gradient(0deg, #404e5c, #404e5c),
+    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-blend-mode: color, normal;
+  background-size: cover;
+}
+#box3 {
+  background: linear-gradient(0deg, #404e5c, #404e5c),
+    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-blend-mode: color, normal;
+  background-size: cover;
+}
+#box4 {
+  background: linear-gradient(0deg, #404e5c, #404e5c),
+    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-blend-mode: color, normal;
+  background-size: cover;
+}
+#box5 {
+  background: linear-gradient(0deg, #404e5c, #404e5c),
+    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-blend-mode: color, normal;
+  background-size: cover;
+}
+#box6 {
+  background: linear-gradient(0deg, #404e5c, #404e5c),
+    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background-blend-mode: color, normal;
+  background-size: cover;
+}
