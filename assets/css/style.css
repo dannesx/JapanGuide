@@ -18,9 +18,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 
 /* --> Setup <-- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--black);
 }
@@ -52,11 +57,12 @@ input[type="text"],
 input[type="submit"],
 textarea {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
-  letter-spacing: 2px;
-  line-height: 23px;
+  letter-spacing: 1px;
+  line-height: 26px;
   color: white;
+  opacity: 0.7;
 }
 
 a {
@@ -65,6 +71,7 @@ a {
   font-weight: 500;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .container {
@@ -92,12 +99,14 @@ header {
 .logo img {
   width: 35px;
   height: 35px;
+  cursor: pointer;
 }
 
 .logo h1 {
   font-size: 30px;
   font-weight: 400;
   margin-left: 10px;
+  cursor: pointer;
 }
 /* Nav */
 header nav ul {
@@ -120,9 +129,13 @@ header nav ul li:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, #ff3645, #ff3645),
+  background: linear-gradient(
+      0deg,
+      rgba(230, 57, 70, 0.8),
+      rgba(230, 57, 70, 0.8)
+    ),
     url(../images/background.jpg);
-  background-blend-mode: overlay, normal;
+  background-blend-mode: color, normal;
   background-position: center;
   background-size: cover;
 }
@@ -135,7 +148,7 @@ header nav ul li:last-child {
   border-radius: 2rem;
   filter: drop-shadow(4px 4px 4px var(--black));
   background: rgba(0, 0, 0, 0.01);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   cursor: default;
   transition: 0.5s;
 }
@@ -144,18 +157,18 @@ header nav ul li:last-child {
   transform: scale(1.1);
 }
 
-/* --> Body 1 <-- */
-#body1 .container {
+/* --> About <-- */
+#about .container {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-#body1 p {
+#about p {
   text-align: left;
 }
 
-#body1 .box {
+#about .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,21 +177,21 @@ header nav ul li:last-child {
   padding: 0 100px;
 }
 
-#body1 .box:first-child {
+#about .box:first-child {
   background: var(--darkblue);
 }
 
-#body1 .box:nth-child(2) {
+#about .box:nth-child(2) {
   background: url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
   background-size: cover;
 }
 
-#body1 .box:nth-child(3) {
+#about .box:nth-child(3) {
   background: url(../images/andre-benz-MsMISAIe8Qw-unsplash.jpg);
   background-size: cover;
 }
 
-#body1 .box:last-child {
+#about .box:last-child {
   background: var(--red);
 }
 /* Background */
@@ -187,10 +200,10 @@ header nav ul li:last-child {
   height: 400px;
   background: url(../images/arc.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;
 }
 
-/* --> Body 2 <-- */
+/* --> Guide <-- */
 
 .container h2,
 .container p {
@@ -204,7 +217,7 @@ header nav ul li:last-child {
   justify-content: center;
 }
 
-#body2 .master-box .box {
+#guide .master-box .box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,70 +250,89 @@ header nav ul li:last-child {
   width: 70px;
   height: 70px;
 }
+
+#guide h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 15px;
+}
 /* Master Box - Background */
 #box1 {
   background: linear-gradient(0deg, #404e5c, #404e5c),
-    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+    url(../images/culture.jpg);
   background-blend-mode: color, normal;
   background-size: cover;
 }
 #box2 {
-  background: linear-gradient(0deg, #404e5c, #404e5c),
-    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+  background: linear-gradient(0deg, #404e5c, #404e5c), url(../images/nature.jpg);
   background-blend-mode: color, normal;
-  background-size: cover;
+  background-position: center 25%;
+  background-size: 400%;
 }
 #box3 {
   background: linear-gradient(0deg, #404e5c, #404e5c),
-    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+    url(../images/tourism.jpg);
   background-blend-mode: color, normal;
-  background-size: cover;
+  background-position: 70% 55%;
+  background-size: 170%;
 }
 #box4 {
   background: linear-gradient(0deg, #404e5c, #404e5c),
-    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+    url(../images/culinary.jpg);
   background-blend-mode: color, normal;
+  background-position: center;
   background-size: cover;
 }
 #box5 {
   background: linear-gradient(0deg, #404e5c, #404e5c),
-    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+    url(../images/monument.jpg);
   background-blend-mode: color, normal;
-  background-size: cover;
+  background-position: center;
+  background-size: 150%;
 }
 #box6 {
   background: linear-gradient(0deg, #404e5c, #404e5c),
-    url(../images/alexander-smagin-F238e9oGQqQ-unsplash.jpg);
+    url(../images/tecnology.jpg);
   background-blend-mode: color, normal;
-  background-size: cover;
+  background-position: 65% center;
+  background-size: 200%;
 }
 
-/* --> Body 3 <-- */
-#body3 {
+/* --> Packages <-- */
+#packages {
   background: var(--red);
 }
 
-#body3 .master-box {
+#packages .master-box {
   justify-content: space-between;
 }
 
-#body3 .master-box .box {
+#packages .master-box .box {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 27%;
+  width: 30%;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-#body3 .box img {
+#packages .master-box .box:hover {
+  transform: scale(1.2);
+}
+
+#packages .box img {
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
-#body3 .bg {
+#packages .bg {
+  height: 500px;
   background: url(../images/tianshu-liu-khQY5Eu-aa0-unsplash.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
 }
 
 /* -->Contact <-- */
@@ -311,7 +343,8 @@ header nav ul li:last-child {
 #contact .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-bottom: 20px;
 }
 
 #contact .box {
@@ -339,6 +372,7 @@ header nav ul li:last-child {
   background: #fff;
   color: var(--black);
   border: none;
+  cursor: text;
 }
 
 .form textarea {
